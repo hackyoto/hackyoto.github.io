@@ -6,6 +6,21 @@
     --color: yellow;
 }
 
+*::selection {
+    background-color: var(--color);
+    color: black;
+}
+
+*::-moz-selection {
+    background-color: var(--color);
+    color: black;
+}
+
+html {
+    height: 100%;
+    overflow: hidden;
+}
+
 body {
     padding: 0;
     margin: 0;
@@ -13,8 +28,8 @@ body {
     align-items: center;
     background-color: black;
     font-family: 'Inter', sans-serif;
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     text-align: center;
     flex-flow: column;
     line-height: 1;
@@ -22,7 +37,7 @@ body {
 }
 
 body.loading {
-    opacity: 0;
+    visibility: hidden;
 }
 
 body.loading *, body.loading *:after, body.loading *:before  {

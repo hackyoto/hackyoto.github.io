@@ -1,3 +1,5 @@
 window.addEventListener('load', function () {
-    document.querySelector('body').removeAttribute('class');
+    setTimeout(() => {
+        document.querySelector('body').removeAttribute('class');
+    }, 100);
 });
