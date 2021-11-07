@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap');
 
 :root {
     --color: hsl(0, 100%, 100%);
@@ -29,26 +29,24 @@ body {
     line-height: 1;
     display: grid;
     place-items: center;
-
-    background:
-    linear-gradient(
+    background: linear-gradient(
         180deg, 
-        hsl(350deg 100% 50% / 50%),
+        hsl(355deg 100% 50% / 65%),
         hsl(  0deg   0%  0% /  0%)
     ),
     radial-gradient(
         circle,
         transparent,
-        hsl(255deg 100% 50% / 10%)
+        hsl(260deg 100% 50% / 50%)
     ),
-    hsl(290, 100%, 5%)
+    hsl(255deg 100% 10%);
 }
 
 body:before {
     content: '';
     position: absolute;
     inset: 0;
-    filter: blur(32px) saturate(.1);
+    filter: blur(32px) saturate(.75);
     background: url(background.gif) no-repeat center/cover;
     mix-blend-mode: color-dodge;
 }
@@ -67,7 +65,7 @@ body:after {
     inset: 0;
     position: absolute;
     isolation: isolate;
-    background: hsl(290, 100%, 5%);
+    background: white;
     transition: opacity .25s ease-in-out;
 }
 
@@ -85,7 +83,7 @@ h1 {
     margin: 0;
     position: relative;
     color: white;
-    font-weight: 100;
+    font-weight: 300;
     margin-left: -2rem;
 }
 
@@ -103,7 +101,7 @@ h1 span {
 h2 {
     margin: 0;
     font-size: .75rem;
-    font-weight: 100;
+    font-weight: 300;
     text-transform: uppercase;
     letter-spacing: .125rem;
 }
