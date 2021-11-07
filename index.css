@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap');
 
 :root {
     --color: hsl(0, 100%, 100%);
@@ -33,7 +33,7 @@ body {
     background:
     linear-gradient(
         180deg, 
-        hsl(345deg 100% 50% / 50%),
+        hsl(190deg 100% 50% / 50%),
         hsl(  0deg   0%  0% /  0%)
     ),
     radial-gradient(
@@ -86,12 +86,14 @@ h1 {
     position: relative;
     color: white;
     font-weight: 100;
+    margin-left: -2rem;
 }
 
 h1:before {
     content: attr(data-content);
     mix-blend-mode: overlay;
     position: absolute;
+    opacity: 0;
 }
 
 h1 span {
@@ -100,14 +102,17 @@ h1 span {
 
 h2 {
     margin: 0;
-    font-size: 1rem;
+    font-size: .75rem;
     font-weight: 100;
+    text-transform: uppercase;
+    letter-spacing: .125rem;
 }
 
 h2:before {
     content: attr(data-content);
     mix-blend-mode: overlay;
     position: absolute;
+    opacity: .25;
 }
 
 h2 span {
