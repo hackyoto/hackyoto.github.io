@@ -1,6 +1,15 @@
 window.addEventListener('load', function () {
-    document.querySelector('body').className = "loaded";
-    setTimeout(() => {
-        document.querySelector('body').removeAttribute('class');
-    }, 250);
-});
+
+    const body = document.querySelector('body');
+
+    body.className = 'loaded';
+
+    if (body.classList.contains('loaded')) {
+
+        setTimeout(() => {
+            body.removeAttribute('class');
+        }, 250);
+
+    }
+
+})
