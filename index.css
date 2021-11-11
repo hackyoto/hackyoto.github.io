@@ -38,13 +38,13 @@ body {
     align-items: center;
     background: linear-gradient(
         180deg, 
-        hsl(355deg 100% 50% / 65%),
+        hsl(290deg 50% 50% / 65%),
         hsl(  0deg   0%  0% /  0%)
     ),
     radial-gradient(
         circle,
         transparent,
-        hsl(260deg 100% 50% / 50%)
+        hsl(260deg 40% 50% / 50%)
     ),
     hsl(255deg 100% 10%);
 }
@@ -53,12 +53,10 @@ body:before {
     content: '';
     position: absolute;
     inset: 0;
-    filter: blur(32px) saturate(.75);
-    background-image: url(background.gif);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background: url(background.gif) no-repeat center/cover;
     mix-blend-mode: color-dodge;
+    -webkit-filter: blur(32px) saturate(0);
+            filter: blur(32px) saturate(0);
 }
 
 body.loading:after {
@@ -111,7 +109,7 @@ h1 span {
 h2 {
     margin: 0;
     font-size: .75rem;
-    font-weight: 300;
+    font-weight: 400;
     text-transform: uppercase;
     letter-spacing: .125rem;
 }
