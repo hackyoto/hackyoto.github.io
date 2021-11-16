@@ -139,10 +139,10 @@ a {
     color: white;
     position: relative;
     text-decoration: none;
-    margin-top: 1rem;
+    margin-top: 1.5rem;
     margin-left: -.5rem;
     font-size: 1rem;
-    padding: .5rem .75rem .5rem .5rem;
+    padding: .5rem .875rem .5rem .5rem;
     border-radius: 1.25rem;
     position: relative;
 }
