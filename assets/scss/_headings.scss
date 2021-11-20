@@ -1,0 +1,30 @@
+h1,
+h2 {
+    span {
+        mix-blend-mode: overlay;
+    }
+}
+
+h1 {
+    font-size: 2rem;
+    margin: 0;
+    position: relative;
+    color: white;
+    font-weight: 300;
+    margin-left: -2rem;
+}
+
+h2 {
+    margin: 0;
+    font-size: .75rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: .125rem;
+
+    &:before {
+        content: attr(data-content);
+        mix-blend-mode: overlay;
+        position: absolute;
+        opacity: .25;
+    }
+}

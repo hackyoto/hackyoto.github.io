@@ -1,0 +1,23 @@
+{
+  "name": "hackyoto.github.io",
+  "version": "1.0.0",
+  "description": "Hackyoto",
+  "main": "index.js",
+  "scripts": {
+    "start": "sass --no-source-map --watch assets/scss:assets/css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hackyoto/hackyoto.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hackyoto/hackyoto.github.io/issues"
+  },
+  "homepage": "https://github.com/hackyoto/hackyoto.github.io#readme",
+  "dependencies": {
+    "sass": "^1.43.4"
+  }
+}
