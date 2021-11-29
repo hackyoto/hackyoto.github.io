@@ -1,6 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600&display=swap");
 :root {
-  --color: hsl(0, 100%, 100%);
+  --color: crimson;
   font-size: 16px;
 }
 
@@ -20,30 +20,30 @@ a {
   color: white;
   position: relative;
   text-decoration: none;
-  margin-top: 1.5rem;
-  margin-left: -0.5rem;
-  font-size: 1rem;
-  padding: 0.5rem 0.875rem 0.5rem 0.5rem;
-  border-radius: 1.25rem;
+  margin-top: 1.25rem;
+  font-size: 0.875rem;
+  padding: 0.75rem;
   position: relative;
+  font-weight: 600;
+  border-radius: 0.125rem;
+  letter-spacing: 1px;
+  overflow: hidden;
+  transition: 0.25s ease-in-out;
+  clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 0.75rem), calc(100% - 0.75rem) 100%, 0% 100%);
 }
 a:after {
   content: "";
   inset: 0;
-  mix-blend-mode: overlay;
   position: absolute;
-  border-radius: 1.25rem;
-  outline: 0px solid white;
 }
 a > img {
   height: 1.5rem;
   margin-right: 0.5rem;
 }
 a:hover, a:focus, a:active {
+  padding: 0.75rem 1rem 0.75rem 0.75rem;
   text-decoration: none;
-}
-a:hover:after, a:focus:after, a:active:after {
-  outline-width: 2px;
+  background: var(--color);
 }
 
 body {
@@ -51,22 +51,14 @@ body {
   margin: 0;
   overflow: hidden;
   color: white;
-  font-family: "Inter", serif;
+  font-family: "Chakra Petch", sans-serif;
   height: 100%;
   width: 100%;
   line-height: 1;
   display: flex;
+  text-transform: uppercase;
   align-items: center;
-  background: linear-gradient(180deg, rgba(170, 64, 191, 0.65), rgba(0, 0, 0, 0)), radial-gradient(circle, rgba(0, 0, 0, 0), rgba(111, 77, 179, 0.5)), #0d0033;
-}
-body:before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: url(../images/background.gif) no-repeat center/cover;
-  mix-blend-mode: color-dodge;
-  -webkit-filter: blur(32px) saturate(0);
-  filter: blur(32px) saturate(0);
+  background: #1B1D1C;
 }
 body.loading:after {
   opacity: 1;
@@ -80,7 +72,7 @@ body:after {
   inset: 0;
   position: absolute;
   isolation: isolate;
-  background: white;
+  background: #1B1D1C;
   transition: opacity 0.25s ease-in-out;
 }
 body:not(.loading, .loaded):after {
@@ -88,39 +80,32 @@ body:not(.loading, .loaded):after {
 }
 
 div {
-  margin-top: 48px;
+  margin-top: 3rem;
   display: flex;
   align-items: flex-start;
   position: relative;
   flex-direction: column;
 }
 
-h1 span,
-h2 span {
-  mix-blend-mode: overlay;
-}
-
 h1 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   margin: 0;
   position: relative;
-  color: white;
-  font-weight: 300;
-  margin-left: -2rem;
+  font-weight: 600;
+}
+h1 span {
+  letter-spacing: -0.5rem;
+  margin-right: 0.625rem;
+  color: var(--color);
 }
 
 h2 {
   margin: 0;
+  color: var(--color);
   font-size: 0.75rem;
-  font-weight: 400;
+  font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.125rem;
-}
-h2:before {
-  content: attr(data-content);
-  mix-blend-mode: overlay;
-  position: absolute;
-  opacity: 0.25;
+  letter-spacing: 1px;
 }
 
 html {

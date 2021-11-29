@@ -3,26 +3,14 @@ body {
     margin: 0;
     overflow: hidden;
     color: white;
-    font-family: 'Inter', serif;
+    font-family: 'Chakra Petch', sans-serif;
     height: 100%;
     width: 100%;
     line-height: 1;
     display: flex;
+    text-transform: uppercase;
     align-items: center;
-    background:
-        linear-gradient(180deg, hsl(290deg 50% 50% / 65%), hsl(  0deg  0%  0% /  0%)),
-        radial-gradient(circle, hsl(  0deg  0%  0% /  0%), hsl(260deg 40% 50% / 50%)),
-        hsl(255deg 100% 10%);
-        
-    &:before {
-        content: '';
-        position: absolute;
-        inset: 0;
-        background: url(../images/background.gif) no-repeat center/cover;
-        mix-blend-mode: color-dodge;
-        -webkit-filter: blur(32px) saturate(0);
-        filter: blur(32px) saturate(0);
-    }
+    background: #1B1D1C;
 
     &.loading:after {
         opacity: 1;
@@ -38,7 +26,7 @@ body {
         inset: 0;
         position: absolute;
         isolation: isolate;
-        background: white;
+        background: #1B1D1C;
         transition: opacity .25s ease-in-out;
     }
 
