@@ -1,56 +1,64 @@
 @import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600&display=swap");
 :root {
-  --color: crimson;
+  --accent: #EEFF33;
+  --complement: #D3DED3;
+  --complement-alpha: #D3DED340;
+  --dominant: #0A0E0F;
+}
+
+:root {
   font-size: 16px;
 }
 
-*::selection {
-  background-color: var(--color);
-  color: black;
+@media (max-width: 425px) {
+  :root {
+    font-size: 12px;
+  }
 }
-
-*::-moz-selection {
-  background-color: var(--color);
-  color: black;
-}
-
 a {
   display: flex;
   align-items: center;
-  color: white;
+  color: var(--complement);
   position: relative;
   text-decoration: none;
   margin-top: 1.25rem;
   font-size: 0.875rem;
-  padding: 0.75rem;
+  padding: 0.75rem 1rem 0.75rem 0.75rem;
   position: relative;
   font-weight: 600;
   border-radius: 0.125rem;
   letter-spacing: 1px;
   overflow: hidden;
-  transition: 0.25s ease-in-out;
   clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 0.75rem), calc(100% - 0.75rem) 100%, 0% 100%);
 }
-a:after {
-  content: "";
-  inset: 0;
-  position: absolute;
+a[href*="zbd.gg"] {
+  border: 1px solid var(--complement-alpha);
 }
-a > img {
-  height: 1.5rem;
-  margin-right: 0.5rem;
+a[href*="zbd.gg"]:not(:hover, :focus, :active):after {
+  content: "";
+  width: 1rem;
+  height: 2px;
+  background: var(--complement-alpha);
+  position: absolute;
+  bottom: -2px;
+  right: -5px;
+  transform-origin: top left;
+  transform: rotate(-45deg);
+}
+a[href*="zbd.gg"]:hover, a[href*="zbd.gg"]:focus, a[href*="zbd.gg"]:active {
+  border-color: var(--accent);
 }
 a:hover, a:focus, a:active {
-  padding: 0.75rem 1rem 0.75rem 0.75rem;
+  --complement: var(--dominant);
+  background: var(--accent);
   text-decoration: none;
-  background: var(--color);
 }
 
 body {
   padding: 0;
   margin: 0;
   overflow: hidden;
-  color: white;
+  color: var(--complement);
   font-family: "Chakra Petch", sans-serif;
   height: 100%;
   width: 100%;
@@ -58,7 +66,7 @@ body {
   display: flex;
   text-transform: uppercase;
   align-items: center;
-  background: #1B1D1C;
+  background: var(--dominant);
 }
 body.loading:after {
   opacity: 1;
@@ -72,7 +80,7 @@ body:after {
   inset: 0;
   position: absolute;
   isolation: isolate;
-  background: #1B1D1C;
+  background: var(--dominant);
   transition: opacity 0.25s ease-in-out;
 }
 body:not(.loading, .loaded):after {
@@ -82,7 +90,6 @@ body:not(.loading, .loaded):after {
 div {
   margin-top: 3rem;
   display: flex;
-  align-items: flex-start;
   position: relative;
   flex-direction: column;
 }
@@ -97,12 +104,12 @@ h1 {
 h1 span {
   letter-spacing: -0.5rem;
   margin-right: 0.625rem;
-  color: var(--color);
+  color: var(--accent);
 }
 
 h2 {
   margin: 0;
-  color: var(--color);
+  color: var(--accent);
   font-size: 0.75rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -114,7 +121,6 @@ html {
 }
 
 p {
-  color: rgba(255, 255, 255, 0.6);
   font-size: 14px;
   line-height: 24px;
   position: absolute;
@@ -126,8 +132,8 @@ section {
   margin: 0 auto 0 20vw;
 }
 
-@media (max-width: 425px) {
-  :root {
-    font-size: 12px;
-  }
+svg {
+  fill: var(--complement);
+  height: 1.5rem;
+  margin-right: 0.5rem;
 }

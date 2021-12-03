@@ -1,0 +1,13 @@
+$yellow: #EEFF33;
+$whitee: #D3DED3;
+$blacky: #0A0E0F;
+
+:root {
+    
+    $complement: $whitee;
+
+    --accent: #{$yellow};
+    --complement: #{$complement};
+    --complement-alpha: #{$complement + "40"};
+    --dominant: #{$blacky};
+}

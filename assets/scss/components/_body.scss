@@ -2,7 +2,7 @@ body {
     padding: 0;
     margin: 0;
     overflow: hidden;
-    color: white;
+    color: var(--complement);
     font-family: 'Chakra Petch', sans-serif;
     height: 100%;
     width: 100%;
@@ -10,7 +10,7 @@ body {
     display: flex;
     text-transform: uppercase;
     align-items: center;
-    background: #1B1D1C;
+    background: var(--dominant);
 
     &.loading:after {
         opacity: 1;
@@ -26,7 +26,7 @@ body {
         inset: 0;
         position: absolute;
         isolation: isolate;
-        background: #1B1D1C;
+        background: var(--dominant);
         transition: opacity .25s ease-in-out;
     }
 
