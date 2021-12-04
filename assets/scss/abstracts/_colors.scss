@@ -1,13 +1,10 @@
-$yellow: #EEFF33;
-$whitee: #D3DED3;
-$blacky: #0A0E0F;
+$accent: hsl(65, 100%, 60%);
+$complement: hsl(120, 15%, 85%);
+$dominant: hsl(190, 20%, 5%);
 
 :root {
-    
-    $complement: $whitee;
-
-    --accent: #{$yellow};
+    --accent: #{$accent};
     --complement: #{$complement};
-    --complement-alpha: #{$complement + "40"};
-    --dominant: #{$blacky};
+    --dominant-lighten: #{lighten($dominant, 5%)};
+    --dominant: #{$dominant};
 }

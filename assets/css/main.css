@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600&display=swap");
 :root {
-  --accent: #EEFF33;
-  --complement: #D3DED3;
-  --complement-alpha: #D3DED340;
-  --dominant: #0A0E0F;
+  --accent: #eeff33;
+  --complement: #d3ded3;
+  --dominant-lighten: #141d1f;
+  --dominant: #0a0e0f;
 }
 
 :root {
@@ -32,21 +32,7 @@ a {
   clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 0.75rem), calc(100% - 0.75rem) 100%, 0% 100%);
 }
 a[href*="zbd.gg"] {
-  border: 1px solid var(--complement-alpha);
-}
-a[href*="zbd.gg"]:not(:hover, :focus, :active):after {
-  content: "";
-  width: 1rem;
-  height: 2px;
-  background: var(--complement-alpha);
-  position: absolute;
-  bottom: -2px;
-  right: -5px;
-  transform-origin: top left;
-  transform: rotate(-45deg);
-}
-a[href*="zbd.gg"]:hover, a[href*="zbd.gg"]:focus, a[href*="zbd.gg"]:active {
-  border-color: var(--accent);
+  background-color: var(--dominant-lighten);
 }
 a:hover, a:focus, a:active {
   --complement: var(--dominant);
