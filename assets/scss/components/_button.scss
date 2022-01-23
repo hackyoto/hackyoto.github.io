@@ -25,4 +25,10 @@ a {
 		background: var(--accent);
 		text-decoration: none;
 	}
+
+	svg {
+		fill: var(--complement);
+		height: 1.5rem;
+		margin-right: .75rem;
+	}
 }
