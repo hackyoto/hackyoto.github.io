@@ -75,11 +75,17 @@ a svg {
 }
 
 .wrapper {
-  margin: 0 20vw;
+  margin: clamp(5rem, 10vw, 10rem);
   width: inherit;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: flex-start;
+}
+@media (max-width: 425px) {
+  .wrapper {
+    margin: 20vw;
+  }
 }
 
 body {
@@ -93,7 +99,6 @@ body {
   line-height: 1;
   display: flex;
   text-transform: uppercase;
-  align-items: center;
   background: var(--dominant);
 }
 body.loading:after {

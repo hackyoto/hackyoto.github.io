@@ -9,7 +9,6 @@ body {
     line-height: 1;
     display: flex;
     text-transform: uppercase;
-    align-items: center;
     background: var(--dominant);
 
     &.loading:after {
