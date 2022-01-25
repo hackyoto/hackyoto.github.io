@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400&display=swap");
 :root {
   --accent: #eeff33;
   --complement: #d3ded3;
@@ -15,7 +16,7 @@
     font-size: 12px;
   }
 }
-a {
+.button {
   display: flex;
   align-items: center;
   color: var(--complement);
@@ -31,15 +32,15 @@ a {
   overflow: hidden;
   clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 0.75rem), calc(100% - 0.75rem) 100%, 0% 100%);
 }
-a[href*="zbd.gg"] {
+.button[href*="zbd.gg"] {
   background-color: var(--dominant-lighten);
 }
-a:hover, a:focus, a:active {
+.button:hover, .button:focus, .button:active {
   --complement: var(--dominant);
   background: var(--accent);
   text-decoration: none;
 }
-a svg {
+.button svg {
   fill: var(--complement);
   height: 1.5rem;
   margin-right: 0.75rem;
@@ -86,6 +87,27 @@ a svg {
   .wrapper {
     margin: 20vw;
   }
+}
+
+article {
+  text-transform: none;
+  margin: auto 0;
+  line-height: 1.5;
+  max-width: 30rem;
+  font-family: "Bai Jamjuree", sans-serif;
+}
+article > * {
+  margin: 1rem 0;
+}
+article h2 {
+  font-size: 1rem;
+  font-weight: normal;
+}
+article a {
+  color: var(--complement);
+}
+article a:hover {
+  color: var(--accent);
 }
 
 body {

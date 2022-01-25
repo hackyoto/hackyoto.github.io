@@ -1,0 +1,20 @@
+article {
+    text-transform: none;
+    margin: auto 0;
+    line-height: 1.5;
+    max-width: 30rem;
+    font-family: 'Bai Jamjuree', sans-serif;
+    > * {
+        margin: 1rem 0;
+    }
+    h2 {
+        font-size: 1rem;
+        font-weight: normal;
+    }
+    a {
+        color: var(--complement);
+        &:hover {
+            color: var(--accent);
+        }
+    }
+}
