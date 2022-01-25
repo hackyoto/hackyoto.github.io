@@ -10,7 +10,7 @@ function load() {
 
             setTimeout(() => {
                 body.removeAttribute('class');
-            }, 250);
+            }, 500);
 
         }
 

@@ -6,7 +6,7 @@
 	--button-padding: var(--gap-sm);
 }
 
-.button {
+a.button, .button {
 	display: flex;
 	align-items: center;
 	
@@ -40,6 +40,7 @@
 	
 	&:hover {
 		--button-background: var(--accent);
+		--button-color: var(--black);
 		--button-color: var(--black);
 	}
 

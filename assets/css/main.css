@@ -56,7 +56,7 @@
   --button-padding: var(--gap-sm);
 }
 
-.button {
+a.button, .button {
   display: flex;
   align-items: center;
   background-color: var(--button-background);
@@ -73,30 +73,31 @@
   cursor: pointer;
   clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 0.75rem), calc(100% - 0.75rem) 100%, 0% 100%);
 }
-.button svg {
+a.button svg, .button svg {
   fill: var(--button-color);
   height: 1.5rem;
   margin-right: 0.75rem;
 }
-.button[href*="zbd.gg"]:not(:hover) {
+a.button[href*="zbd.gg"]:not(:hover), .button[href*="zbd.gg"]:not(:hover) {
   background-color: var(--gray-400);
 }
-.button:hover {
+a.button:hover, .button:hover {
   --button-background: var(--accent);
   --button-color: var(--black);
+  --button-color: var(--black);
 }
-.button.md {
+a.button.md, .button.md {
   --button-padding: var(--button-padding-md);
   --button-font-size: 14px;
 }
-.button.lg {
+a.button.lg, .button.lg {
   --button-padding: var(--button-padding-lg);
   --button-font-size: 16px;
 }
-.button.red {
+a.button.red, .button.red {
   --button-background: var(--red-400);
 }
-.button.red:hover {
+a.button.red:hover, .button.red:hover {
   --button-background: var(--white);
 }
 
@@ -113,6 +114,7 @@
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
+  line-height: 1;
 }
 
 .logotype {
@@ -120,6 +122,8 @@
   margin: 0;
   position: relative;
   margin-left: -1.75rem;
+  font-weight: 700;
+  line-height: 1;
 }
 .logotype span {
   letter-spacing: -0.5rem;
