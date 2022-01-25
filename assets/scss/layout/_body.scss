@@ -2,14 +2,14 @@ body {
     padding: 0;
     margin: 0;
     overflow: hidden;
-    color: var(--complement);
+    color: var(--white);
     font-family: 'Chakra Petch', sans-serif;
     height: 100%;
     width: 100%;
     line-height: 1;
     display: flex;
     text-transform: uppercase;
-    background: var(--dominant);
+    background: var(--black);
 
     &.loading:after {
         opacity: 1;

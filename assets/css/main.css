@@ -1,53 +1,106 @@
-@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400&display=swap");
 :root {
+  --gray-400: #141d1f;
+  --yellow-400: #eeff33;
+  --yellow-alpha-100: rgba(238, 255, 51, 0.05);
+  --yellow-alpha-200: rgba(238, 255, 51, 0.15);
+  --yellow-alpha-300: rgba(238, 255, 51, 0.25);
+  --yellow-alpha-400: rgba(238, 255, 51, 0.35);
+  --red-400: #ee2b4b;
+  --red-alpha-100: rgba(238, 43, 75, 0.05);
+  --red-alpha-200: rgba(238, 43, 75, 0.15);
+  --red-alpha-300: rgba(238, 43, 75, 0.25);
+  --red-alpha-400: rgba(238, 43, 75, 0.35);
+  --white: #d3ded3;
+  --black: #0a0e0f;
   --accent: #eeff33;
-  --complement: #d3ded3;
-  --dominant-lighten: #141d1f;
-  --dominant: #0a0e0f;
+}
+
+.red:root {
+  --accent: #ee2b4b;
+}
+
+.blue:root {
+  --accent: #6666ff;
 }
 
 :root {
-  font-size: 16px;
+  --base: 8px;
+  --radius-sm: 0.125rem;
+  --radius-md: 0.25rem;
+  --radius-lg: 0.5rem;
+  --gap-sm: 0.75rem;
+  --gap-md: 1.25rem;
+  --gap-lg: 2rem;
+  --line-height-sm: 0.75;
+  --line-height-md: 1;
+  --line-height-lg: 1.5;
 }
 
 @media (max-width: 425px) {
   :root {
-    font-size: 12px;
+    --base: 6px;
   }
 }
+:root {
+  font-size: calc(var(--base) * 2);
+  --accent-font: "Chakra Petch", arial, sans-serif;
+}
+
+:root {
+  --button-background: none;
+  --button-color: var(--white);
+  --button-font-size: .875rem;
+  --button-radius: var(--radius-sm);
+  --button-padding: var(--gap-sm);
+}
+
 .button {
   display: flex;
   align-items: center;
-  color: var(--complement);
-  position: relative;
-  text-decoration: none;
-  margin-top: 1.25rem;
-  font-size: 0.875rem;
-  padding: 0.75rem 1rem 0.75rem 0.75rem;
-  position: relative;
-  font-weight: 600;
-  border-radius: 0.125rem;
+  background-color: var(--button-background);
+  color: var(--button-color);
+  border: none;
+  border-radius: var(--button-radius);
+  padding: var(--button-padding);
+  font-family: var(--accent-font);
+  font-size: var(--button-font-size);
+  font-weight: 700;
+  line-height: 1;
   letter-spacing: 1px;
-  overflow: hidden;
+  text-decoration: none;
+  cursor: pointer;
   clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 0.75rem), calc(100% - 0.75rem) 100%, 0% 100%);
 }
-.button[href*="zbd.gg"] {
-  background-color: var(--dominant-lighten);
-}
-.button:hover, .button:focus, .button:active {
-  --complement: var(--dominant);
-  background: var(--accent);
-  text-decoration: none;
-}
 .button svg {
-  fill: var(--complement);
+  fill: var(--button-color);
   height: 1.5rem;
   margin-right: 0.75rem;
 }
+.button[href*="zbd.gg"]:not(:hover) {
+  background-color: var(--gray-400);
+}
+.button:hover {
+  --button-background: var(--accent);
+  --button-color: var(--black);
+}
+.button.md {
+  --button-padding: var(--button-padding-md);
+  --button-font-size: 14px;
+}
+.button.lg {
+  --button-padding: var(--button-padding-lg);
+  --button-font-size: 16px;
+}
+.button.red {
+  --button-background: var(--red-400);
+}
+.button.red:hover {
+  --button-background: var(--white);
+}
 
 .menu {
-  margin-top: 3rem;
   display: flex;
   position: relative;
   flex-direction: column;
@@ -62,14 +115,13 @@
   letter-spacing: 1px;
 }
 
-.title {
+.logotype {
   font-size: 2rem;
   margin: 0;
   position: relative;
-  font-weight: 600;
   margin-left: -1.75rem;
 }
-.title span {
+.logotype span {
   letter-spacing: -0.5rem;
   margin-right: 0.625rem;
   color: var(--accent);
@@ -114,14 +166,14 @@ body {
   padding: 0;
   margin: 0;
   overflow: hidden;
-  color: var(--complement);
+  color: var(--white);
   font-family: "Chakra Petch", sans-serif;
   height: 100%;
   width: 100%;
   line-height: 1;
   display: flex;
   text-transform: uppercase;
-  background: var(--dominant);
+  background: var(--black);
 }
 body.loading:after {
   opacity: 1;

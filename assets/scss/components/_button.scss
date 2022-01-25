@@ -1,34 +1,64 @@
+:root {
+	--button-background: none;
+	--button-color: var(--white);
+	--button-font-size: .875rem;
+	--button-radius: var(--radius-sm);
+	--button-padding: var(--gap-sm);
+}
+
 .button {
 	display: flex;
 	align-items: center;
-	color: var(--complement);
-	position: relative;
-	text-decoration: none;
-	margin-top: 1.25rem;
-	font-size: .875rem;
-	padding: .75rem 1rem .75rem .75rem;
-	position: relative;
-	font-weight: 600;
-	border-radius: .125rem;
+	
+	
+	background-color: var(--button-background);
+	color: var(--button-color);
+	
+	border: none;
+	border-radius: var(--button-radius);	
+	padding: var(--button-padding);
+	
+	font-family: var(--accent-font);
+	font-size: var(--button-font-size);
+	font-weight: 700;
+	line-height: 1;
 	letter-spacing: 1px;
-	overflow: hidden;
+	text-decoration: none;
+
+	cursor: pointer;
 	clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - .75rem), calc(100% - .75rem) 100%, 0% 100%);
-
-	&[href*="zbd.gg"] {
-		background-color: var(--dominant-lighten);
-	}
-
-	&:hover,
-	&:focus,
-	&:active {
-		--complement: var(--dominant);
-		background: var(--accent);
-		text-decoration: none;
-	}
-
+	
 	svg {
-		fill: var(--complement);
+		fill: var(--button-color);
 		height: 1.5rem;
 		margin-right: .75rem;
 	}
+
+	&[href*="zbd.gg"]:not(:hover) {
+		background-color: var(--gray-400);
+	}
+	
+	&:hover {
+		--button-background: var(--accent);
+		--button-color: var(--black);
+	}
+
+	&.md {
+		--button-padding: var(--button-padding-md);
+		--button-font-size: 14px;
+	}
+
+	&.lg {
+		--button-padding: var(--button-padding-lg);
+		--button-font-size: 16px;
+	}
+
+	&.red {
+		--button-background: var(--red-400);
+
+		&:hover {
+			--button-background: var(--white);
+		}
+	}
+
 }

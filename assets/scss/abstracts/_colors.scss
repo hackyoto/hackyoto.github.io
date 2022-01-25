@@ -1,10 +1,48 @@
-$accent: hsl(65, 100%, 60%);
-$complement: hsl(120, 15%, 85%);
-$dominant: hsl(190, 20%, 5%);
+$yellow:    hsl(65, 100%, 60%);
+$red:       hsl(350, 85%, 55%);
+$blue:      hsl(240, 100%, 70%);
+$white:     hsl(120, 15%, 85%);
+$black:     hsl(190, 20%, 5%);
+
+$hue: 190;
+
+$colors: (
+    gray: (
+        400: hsl(190, 20%, 10%),
+    ),
+    yellow: (
+        400: $yellow,
+        alpha-100: transparentize($yellow, .95),
+        alpha-200: transparentize($yellow, .85),
+        alpha-300: transparentize($yellow, .75),
+        alpha-400: transparentize($yellow, .65),
+    ),
+    red: (
+        400: $red,
+        alpha-100: transparentize($red, .95),
+        alpha-200: transparentize($red, .85),
+        alpha-300: transparentize($red, .75),
+        alpha-400: transparentize($red, .65),
+    ),
+);
 
 :root {
-    --accent: #{$accent};
-    --complement: #{$complement};
-    --dominant-lighten: #{lighten($dominant, 5%)};
-    --dominant: #{$dominant};
+	@each $color, $shades in $colors {
+		@each $shade, $value in $shades {
+			#{"--" + $color}-#{$shade}: #{$value};
+		}
+	}
+	
+    --white: #{$white};
+	--black: #{$black};
+
+    --accent: #{$yellow};
+}
+
+.red:root {
+    --accent: #{$red};
+}
+
+.blue:root {
+    --accent: #{$blue};
 }

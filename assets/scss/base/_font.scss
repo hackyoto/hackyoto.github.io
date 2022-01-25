@@ -1,12 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400&display=swap');
 
 :root {
-    font-size: 16px;
-}
-
-@media (max-width: 425px) {
-    :root {
-        font-size: 12px;
-    }
+	font-size: calc(var(--base) * 2);
+    --accent-font: 'Chakra Petch', arial, sans-serif;
 }
