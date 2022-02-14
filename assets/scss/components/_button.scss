@@ -1,15 +1,14 @@
 :root {
-	--button-background: none;
-	--button-color: var(--white);
+	--button-background: var(--accent);
+	--button-color: var(--black);
 	--button-font-size: .875rem;
 	--button-radius: var(--radius-sm);
-	--button-padding: var(--gap-sm);
+	--button-padding: var(--gap-sm) calc(var(--gap-sm) + .25rem);
 }
 
 a.button, .button {
 	display: flex;
 	align-items: center;
-	
 	
 	background-color: var(--button-background);
 	color: var(--button-color);
@@ -24,6 +23,7 @@ a.button, .button {
 	line-height: 1;
 	letter-spacing: 1px;
 	text-decoration: none;
+	text-transform: uppercase;
 
 	cursor: pointer;
 	clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - .75rem), calc(100% - .75rem) 100%, 0% 100%);
@@ -31,21 +31,15 @@ a.button, .button {
 	svg {
 		fill: var(--button-color);
 		height: 1.5rem;
-		margin-right: .75rem;
-	}
-
-	&[href*="zbd.gg"]:not(:hover) {
-		background-color: var(--gray-400);
+		margin-left: auto;
 	}
 	
 	&:hover {
-		--button-background: var(--accent);
-		--button-color: var(--black);
-		--button-color: var(--black);
+		--button-background: var(--blue-600);
 	}
 
 	&.md {
-		--button-padding: var(--button-padding-md);
+		--button-padding: var(--gap-md);
 		--button-font-size: 14px;
 	}
 

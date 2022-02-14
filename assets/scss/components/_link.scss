@@ -1,0 +1,58 @@
+:root {
+	--link-background: none;
+	--link-color: var(--white);
+	--link-font-size: .875rem;
+	--link-radius: var(--radius-sm);
+	--link-padding: var(--gap-sm);
+}
+
+a.link {
+	display: flex;
+	align-items: center;
+	
+	
+	background-color: var(--link-background);
+	color: var(--link-color);
+	
+	border: none;
+	border-radius: var(--link-radius);	
+	padding: var(--link-padding);
+	
+	font-family: var(--accent-font);
+	font-size: var(--link-font-size);
+	font-weight: 700;
+	line-height: 1;
+	letter-spacing: 1px;
+	text-decoration: none;
+	text-transform: uppercase;
+
+	cursor: pointer;
+	clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - .75rem), calc(100% - .75rem) 100%, 0% 100%);
+	
+	svg {
+		fill: var(--link-color);
+		height: 1.5rem;
+		margin-right: .75rem;
+	}
+
+	&[href*="zbd.gg"]:not(:hover) {
+		background-color: var(--gray-400);
+	}
+	
+	&:hover {
+		--link-background: var(--accent);
+		--link-color: var(--black);
+		--link-color: var(--black);
+	}
+
+	&.md {
+		--link-padding: var(--link-padding-md);
+		--link-font-size: 14px;
+	}
+
+	&.lg {
+		--link-padding: var(--link-padding-lg);
+		--link-font-size: 16px;
+	}
+
+}

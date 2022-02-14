@@ -1,0 +1,33 @@
+
+.input {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    input {
+        background-color: var(--gray-400);
+        border: none;
+        padding: var(--gap-xs) calc(var(--gap-xs) + .25rem);
+        font-size: 1rem;
+        line-height: var(--line-height-lg);
+        border-radius: var(--radius-sm);
+        color: var(--white);
+        transition: .5s ease-in-out;
+        
+        &:focus,
+        &:focus-visible {
+            outline: none;
+        }
+    }
+
+    &__validation {
+        position: absolute;
+        bottom: 0.5rem;
+        right: 0.5rem;
+        z-index: 1;
+        opacity: 0;
+        img {
+            height: 1.5rem;
+        }
+    }
+}

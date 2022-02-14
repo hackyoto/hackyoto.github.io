@@ -5,7 +5,8 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
+
     @media (max-width: 425px) {
-        margin: 20vw;
-    }    
+        margin: 15vw;
+    }
 }

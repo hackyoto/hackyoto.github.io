@@ -1,14 +1,16 @@
 $yellow:    hsl(65, 100%, 60%);
 $red:       hsl(350, 85%, 55%);
 $blue:      hsl(240, 100%, 70%);
+$green:     hsl(110, 75%, 50%);
 $white:     hsl(120, 15%, 85%);
 $black:     hsl(190, 20%, 5%);
-
-$hue: 190;
+$gray:      hsl(190, 20%, 10%);
 
 $colors: (
     gray: (
-        400: hsl(190, 20%, 10%),
+        400: $gray,
+        500: darken($gray, 7%),
+        alpha-200: transparentize($gray, .85),
     ),
     yellow: (
         400: $yellow,
@@ -23,6 +25,21 @@ $colors: (
         alpha-200: transparentize($red, .85),
         alpha-300: transparentize($red, .75),
         alpha-400: transparentize($red, .65),
+    ),
+    blue: (
+        400: $blue,
+        600: darken($blue, 10%),
+        alpha-100: transparentize($blue, .95),
+        alpha-200: transparentize($blue, .85),
+        alpha-300: transparentize($blue, .75),
+        alpha-400: transparentize($blue, .65),
+    ),
+    green: (
+        400: $green,
+        alpha-100: transparentize($green, .95),
+        alpha-200: transparentize($green, .85),
+        alpha-300: transparentize($green, .75),
+        alpha-400: transparentize($green, .65),
     ),
 );
 

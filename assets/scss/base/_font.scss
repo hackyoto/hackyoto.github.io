@@ -4,4 +4,11 @@
 :root {
 	font-size: calc(var(--base) * 2);
     --accent-font: 'Chakra Petch', arial, sans-serif;
+    --complement-font: 'Bai Jamjuree', arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h5 {
+    margin: 0;
+    font-weight: 700;
+    line-height: var(--line-height-md);
 }

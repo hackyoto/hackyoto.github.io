@@ -1,21 +1,14 @@
-function load() {
+const body = document.querySelector('body')
 
-    window.addEventListener('load', function () {
+function loadBody() {
 
-        const body = document.querySelector('body');
-
-        body.className = 'loaded';
-
-        if (body.classList.contains('loaded')) {
-
-            setTimeout(() => {
-                body.removeAttribute('class');
-            }, 500);
-
-        }
-
+    window.addEventListener('load', () => {
+        body.className = 'loaded'
+        body.addEventListener('transitionend', () => {
+            body.removeAttribute('class');
+        })
     })
 
 }
 
-load();
+loadBody()
