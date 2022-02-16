@@ -143,13 +143,16 @@ h1, h2, h3, h4, h5, h5 {
 a.button, .button {
   display: flex;
   align-items: center;
-  background-color: var(--button-background);
-  color: var(--button-color);
+  background: linear-gradient(-45deg, var(--accent) 30%, var(--blue-600) 30%, var(--blue-600) 60%, var(--white) 60%);
+  background-size: 500%;
+  background-position: 100%;
+  color: var(--link-color);
+  transition: background var(--link-transition-duration) linear, color calc(var(--link-transition-duration) / 4) linear;
   border: none;
-  border-radius: var(--button-radius);
-  padding: var(--button-padding);
+  border-radius: var(--link-radius);
+  padding: var(--link-padding);
   font-family: var(--accent-font);
-  font-size: var(--button-font-size);
+  font-size: var(--link-font-size);
   font-weight: 700;
   line-height: 1;
   letter-spacing: 1px;
@@ -159,12 +162,14 @@ a.button, .button {
   clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 0.75rem), calc(100% - 0.75rem) 100%, 0% 100%);
 }
 a.button svg, .button svg {
-  fill: var(--button-color);
+  fill: var(--link-color);
   height: 1.5rem;
-  margin-left: auto;
+  margin-right: 0.75rem;
+  transition: fill calc(var(--link-transition-duration) / 4) linear;
 }
 a.button:hover, .button:hover {
-  --button-background: var(--blue-600);
+  background-position: 0%;
+  --link-color: var(--gray-400);
 }
 a.button.md, .button.md {
   --button-padding: var(--gap-md);
@@ -173,12 +178,6 @@ a.button.md, .button.md {
 a.button.lg, .button.lg {
   --button-padding: var(--button-padding-lg);
   --button-font-size: 16px;
-}
-a.button.red, .button.red {
-  --button-background: var(--red-400);
-}
-a.button.red:hover, .button.red:hover {
-  --button-background: var(--white);
 }
 
 .input {
@@ -221,18 +220,21 @@ label, .label {
 }
 
 :root {
-  --link-background: none;
   --link-color: var(--white);
   --link-font-size: .875rem;
   --link-radius: var(--radius-sm);
   --link-padding: var(--gap-sm);
+  --link-transition-duration: .6s;
 }
 
 a.link {
   display: flex;
   align-items: center;
-  background-color: var(--link-background);
+  background: linear-gradient(-45deg, var(--black) 30%, var(--accent) 30%, var(--accent) 60%, var(--white) 60%);
+  background-size: 500%;
+  background-position: 100%;
   color: var(--link-color);
+  transition: background var(--link-transition-duration) linear, color calc(var(--link-transition-duration) / 4) linear;
   border: none;
   border-radius: var(--link-radius);
   padding: var(--link-padding);
@@ -250,14 +252,14 @@ a.link svg {
   fill: var(--link-color);
   height: 1.5rem;
   margin-right: 0.75rem;
-}
-a.link[href*="zbd.gg"]:not(:hover) {
-  background-color: var(--gray-400);
+  transition: fill calc(var(--link-transition-duration) / 4) linear;
 }
 a.link:hover {
-  --link-background: var(--accent);
-  --link-color: var(--black);
-  --link-color: var(--black);
+  background-position: 0%;
+  --link-color: var(--gray-400);
+}
+a.link[href*="zbd.gg"] {
+  --black: var(--gray-400);
 }
 a.link.md {
   --link-padding: var(--link-padding-md);
@@ -300,6 +302,7 @@ a.link.lg {
 @media (max-width: 425px) {
   .wrapper {
     margin: 15vw;
+    align-items: stretch;
   }
 }
 

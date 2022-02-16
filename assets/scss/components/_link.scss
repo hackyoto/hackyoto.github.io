@@ -1,18 +1,21 @@
 :root {
-	--link-background: none;
 	--link-color: var(--white);
 	--link-font-size: .875rem;
 	--link-radius: var(--radius-sm);
 	--link-padding: var(--gap-sm);
+	--link-transition-duration: .6s;
 }
 
 a.link {
 	display: flex;
 	align-items: center;
 	
-	
-	background-color: var(--link-background);
+	background: linear-gradient(-45deg, var(--black) 30%, var(--accent) 30%, var(--accent) 60%, var(--white) 60%);
+	background-size: 500%;
+	background-position: 100%;
 	color: var(--link-color);
+	
+	transition: background var(--link-transition-duration) linear, color calc(var(--link-transition-duration) / 4) linear;
 	
 	border: none;
 	border-radius: var(--link-radius);	
@@ -28,21 +31,21 @@ a.link {
 
 	cursor: pointer;
 	clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - .75rem), calc(100% - .75rem) 100%, 0% 100%);
-	
+
 	svg {
 		fill: var(--link-color);
 		height: 1.5rem;
 		margin-right: .75rem;
+		transition: fill calc(var(--link-transition-duration) / 4) linear;
 	}
 
-	&[href*="zbd.gg"]:not(:hover) {
-		background-color: var(--gray-400);
-	}
-	
 	&:hover {
-		--link-background: var(--accent);
-		--link-color: var(--black);
-		--link-color: var(--black);
+		background-position: 0%;
+		--link-color: var(--gray-400);
+	}
+
+	&[href*="zbd.gg"] {
+		--black: var(--gray-400);
 	}
 
 	&.md {
