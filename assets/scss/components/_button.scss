@@ -10,12 +10,12 @@ a.button, .button {
 	display: flex;
 	align-items: center;
 	
-	background: linear-gradient(-45deg, var(--accent) 30%, var(--blue-600) 30%, var(--blue-600) 60%, var(--white) 60%);
+	background-color: var(--accent);
 	background-size: 500%;
 	background-position: 100%;
 	color: var(--link-color);
 	
-	transition: background var(--link-transition-duration) linear, color calc(var(--link-transition-duration) / 4) linear;
+	transition: var(--link-transition-duration) ease-in-out;
 	
 	border: none;
 	border-radius: var(--link-radius);	
@@ -38,10 +38,13 @@ a.button, .button {
 		margin-right: .75rem;
 		transition: fill calc(var(--link-transition-duration) / 4) linear;
 	}
-	
-	&:hover {
-		background-position: 0%;
-		--link-color: var(--gray-400);
+
+	&:hover, &:focus {
+		background-color: var(--blue-600);
+	}
+
+	&:active {
+		background-color: var(--accent);
 	}
 
 	&.md {

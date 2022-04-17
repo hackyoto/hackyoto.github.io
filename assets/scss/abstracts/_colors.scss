@@ -28,7 +28,7 @@ $colors: (
     ),
     blue: (
         400: $blue,
-        600: darken($blue, 10%),
+        600: desaturate(darken($blue, 10%), 25%),
         alpha-100: transparentize($blue, .95),
         alpha-200: transparentize($blue, .85),
         alpha-300: transparentize($blue, .75),

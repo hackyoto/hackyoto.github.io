@@ -3,19 +3,19 @@
 	--link-font-size: .875rem;
 	--link-radius: var(--radius-sm);
 	--link-padding: var(--gap-sm);
-	--link-transition-duration: .6s;
+	--link-transition-duration: .2s;
 }
 
 a.link {
 	display: flex;
 	align-items: center;
 	
-	background: linear-gradient(-45deg, var(--black) 30%, var(--accent) 30%, var(--accent) 60%, var(--white) 60%);
+	background-color: var(--black);
 	background-size: 500%;
 	background-position: 100%;
 	color: var(--link-color);
 	
-	transition: background var(--link-transition-duration) linear, color calc(var(--link-transition-duration) / 4) linear;
+	transition: var(--link-transition-duration) ease-in-out;
 	
 	border: none;
 	border-radius: var(--link-radius);	
@@ -39,13 +39,20 @@ a.link {
 		transition: fill calc(var(--link-transition-duration) / 4) linear;
 	}
 
-	&:hover {
-		background-position: 0%;
-		--link-color: var(--gray-400);
+	&:hover, &:focus {
+		background-color: var(--gray-400);
+	}
+
+	&:active {
+		background-color: var(--accent);
 	}
 
 	&[href*="zbd.gg"] {
 		--black: var(--gray-400);
+		box-shadow: 0 1.5rem 1rem -1rem var(--gray-500);
+		&:hover, &:focus {
+			background-color: var(--accent);
+		}
 	}
 
 	&.md {
