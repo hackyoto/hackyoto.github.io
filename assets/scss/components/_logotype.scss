@@ -5,6 +5,19 @@
     font-weight: 700;
     line-height: 1;
     text-transform: uppercase;
+
+    opacity: 0;
+    transform: translateY(2rem);
+    filter: blur(.25rem);
+
+    body:not([class]) & {
+        animation-name: entry;
+        animation-duration: 900ms;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
+        animation-delay: 100ms;
+    }
+    
     span {
         letter-spacing: -.5rem;
         margin-right: .625rem;

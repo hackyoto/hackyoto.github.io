@@ -3,4 +3,28 @@
     position: relative;
     flex-direction: column;
     min-width: 13.25rem;
+    > * {
+        opacity: 0;
+        transform: translateY(2rem);
+        filter: blur(.25rem);
+    }
+    body:not([class]) & > * {
+        animation-name: entry;
+        animation-duration: 900ms;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
+        transform-origin: left;
+        @for $i from 1 through 6 {
+            &:nth-child(#{$i}) {
+                animation-delay: #{$i * 100 + 100}ms;
+            }
+        }
+    }
+    body:not([class]) &:last-of-type > * {
+        @for $i from 1 through 2 {
+            &:nth-child(#{$i}) {
+                animation-delay: #{$i * 100 + 700}ms;
+            }
+        }
+    }
 }

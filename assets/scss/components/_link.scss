@@ -10,7 +10,6 @@ a.link {
 	display: flex;
 	align-items: center;
 	
-	background-color: var(--black);
 	background-size: 500%;
 	background-position: 100%;
 	color: var(--link-color);
@@ -29,7 +28,6 @@ a.link {
 	text-decoration: none;
 	text-transform: uppercase;
 
-	cursor: pointer;
 	clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - .75rem), calc(100% - .75rem) 100%, 0% 100%);
 
 	svg {
@@ -48,7 +46,7 @@ a.link {
 	}
 
 	&[href*="zbd.gg"] {
-		--black: var(--gray-400);
+		background-color: var(--gray-400);
 		box-shadow: 0 1.5rem 1rem -1rem var(--gray-500);
 		&:hover, &:focus {
 			background-color: var(--accent);
