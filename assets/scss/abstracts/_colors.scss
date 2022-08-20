@@ -2,7 +2,8 @@ $yellow:    hsl(65, 100%, 60%);
 $red:       hsl(350, 85%, 55%);
 $blue:      hsl(240, 100%, 70%);
 $green:     hsl(110, 75%, 50%);
-$white:     hsl(120, 15%, 85%);
+$offwhite:  hsl(120, 15%, 85%);
+$white:     hsl(0, 100%, 100%);
 $black:     hsl(190, 20%, 5%);
 $gray:      hsl(190, 20%, 10%);
 
@@ -50,16 +51,17 @@ $colors: (
 		}
 	}
 	
-    --white: #{$white};
-	--black: #{$black};
+    --offwhite: #{$offwhite};
+    --white:    #{$white};
+	--black:    #{$black};
 
-    --accent: #{$yellow};
+    --accent:   #{$yellow};
 }
 
 .red:root {
-    --accent: #{$red};
+    --accent:   #{$red};
 }
 
 .blue:root {
-    --accent: #{$blue};
+    --accent:   #{$blue};
 }

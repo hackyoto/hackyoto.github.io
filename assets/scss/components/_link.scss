@@ -1,6 +1,6 @@
 :root {
-	--link-color: var(--white);
-	--link-font-size: .875rem;
+	--link-color: var(--offwhite);
+	--link-font-size: 1rem;
 	--link-radius: var(--radius-sm);
 	--link-padding: var(--gap-sm);
 	--link-transition-duration: .2s;
@@ -10,8 +10,6 @@ a.link {
 	display: flex;
 	align-items: center;
 	
-	background-size: 500%;
-	background-position: 100%;
 	color: var(--link-color);
 	
 	transition: var(--link-transition-duration) ease-in-out;
@@ -22,23 +20,27 @@ a.link {
 	
 	font-family: var(--accent-font);
 	font-size: var(--link-font-size);
-	font-weight: 700;
+	font-weight: 500;
 	line-height: 1;
 	letter-spacing: 1px;
 	text-decoration: none;
-	text-transform: uppercase;
-
+	
 	clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - .75rem), calc(100% - .75rem) 100%, 0% 100%);
 
 	svg {
 		fill: var(--link-color);
-		height: 1.5rem;
+		height: 1.25rem;
 		margin-right: .75rem;
-		transition: fill calc(var(--link-transition-duration) / 4) linear;
+		transition: calc(var(--link-transition-duration) / 4) linear;
 	}
-
-	&:hover, &:focus {
+	
+	&:hover, &:focus, &:active {
 		background-color: var(--gray-400);
+		--link-color: var(--white);
+		svg {
+			filter: drop-shadow(0 0 .75rem var(--white));
+			mix-blend-mode: hard-light;
+		}
 	}
 
 	&:active {
