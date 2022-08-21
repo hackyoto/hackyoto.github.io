@@ -262,7 +262,7 @@ a.link:hover, a.link:focus, a.link:active {
   --link-color: var(--white);
 }
 a.link:hover svg, a.link:focus svg, a.link:active svg {
-  filter: drop-shadow(0 0 0.75rem var(--white));
+  filter: drop-shadow(0 0 2rem var(--white));
   mix-blend-mode: hard-light;
 }
 a.link:active {
