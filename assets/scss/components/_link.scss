@@ -38,7 +38,7 @@ a.link {
 		background-color: var(--gray-400);
 		--link-color: var(--white);
 		svg {
-			filter: drop-shadow(0 0 .75rem var(--white));
+			filter: drop-shadow(0 0 2rem var(--white));
 			mix-blend-mode: hard-light;
 		}
 	}
