@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" class="blue">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" type="text/css" href="assets/css/vendors/bootstrap-grid.min.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/vendors/bootstrap-reboot.min.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/vendors/bootstrap-utilities.min.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/themes.css">
+        <link rel="icon" href="assets/images/blue.png">
+        <title>
+            Hackyoto
+        </title>
+    </head>
+    <body onload="open()">
+        <section class="wrapper">
+            <h1 class="logotype" style="opacity: 1; filter: none; transform: none;">
+                <span>//</span>
+            </h1>
+            <div class="d-flex flex-column gap-2">
+                <div class="d-flex align-items-end gap-2">
+                    <div class="input">
+                        <label for="" class="mb-2">
+                            Year
+                        </label>
+                        <input class="" type="number" id="birthYear" value="1990">
+                    </div>
+                    <input type="button" value="Run it" onclick="setAge();" class="button" id="run">
+                </div>
+                <p id="result">
+                    &nbsp;
+                </p>
+            </div>
+        </section>
+    </body>
+    <script>
+
+        function open() {
+            var msg = window.document.querySelector('.logotype')
+            var hour = new Date().getHours()
+
+            if(hour >= 0 && hour < 12) {
+                var time = 'morning'
+            } else if (hour >= 12 && hour <=18) {
+                var time = 'afternoon'                
+            } else {
+                var time = 'night'               
+            }
+
+            msg.innerHTML = `<span>//</span> Good ${time}, Sir.`                
+        }
+
+    </script>
+
+    <script>
+
+        function setAge() {
+            var currentYear = new Date().getFullYear()
+            var age = currentYear - birthYear.value
+            
+            if (currentYear > birthYear.value && age < 100) {
+                result.innerHTML = `Indivíduo padrão de ${age} anos.`
+            } else if (currentYear > birthYear.value && age > 100) {
+                result.innerHTML = `Matusa de ${age} anos.`
+            } else if (age < 0) {
+                result.innerHTML = 'Ano inválido.'
+            }
+        }
+        
+        run.addEventListener('keyup', function(e) {
+            var key = e.which || e.keyCode
+            if (key == 13) {
+                this.click
+            }
+        })
+
+    </script>
+
+</html>
+
+
